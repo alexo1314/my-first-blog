@@ -1,26 +1,170 @@
 {% load static %}
-<html>
-    <head>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        
-    </head>
-    <body>
-        <div class="page-header">
-            {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/">Django Girls Blog</a></h1>
+{% load mathfilters %}
+<!DOCTYPE html>
+<!--
+  Girly by FreeHTML5.co
+  Twitter: https://twitter.com/fh5co
+  Facebook: https://fb.com/fh5co
+  URL: https://freehtml5.co
+-->
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Girly</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md  fixed-top maine-menu">
+    <div class="container">
+      <button class="navbar-toggler ml-auto" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"> <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span> </button>
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#about" tabindex="-1" aria-disabled="true">About</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#activity" tabindex="-1" aria-disabled="true">Activity</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#portfolio" tabindex="-1" aria-disabled="true">Portfolio</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#testimonial" tabindex="-1" aria-disabled="true">Testimonial</a></li>
+          <li class="nav-item"> <a class="nav-link" href="blog.html" tabindex="-1" aria-disabled="true">Blog</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid fh5co-home-banner">
+    <div class="card"> <img class="card-img" src="static/img/banner-img.jpg" alt="">
+      <div class="card-img-overlay">
+        <div class="center-text">
+          <h2 class="card-title">A camera is the save button
+          for the mind’s eye</h2>
+          <a href="#" class="btn">
+            <svg width="201" height="51" viewBox="0 0 201 51">
+              <defs>
+                <style>
+                .cls-1 {
+                  fill: none;
+                  stroke-width: 1px;
+                  stroke: url(#linear-gradient);
+                }
+              </style>
+              <linearGradient id="linear-gradient" x1="140.508" y1="50.5" x2="60.492" y2="0.5" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#e90e65"/>
+                <stop offset="1" stop-color="#fff"/>
+              </linearGradient>
+            </defs>
+            <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" x="0.5" y="0.5" width="200" height="50" rx="25" ry="25"/>
+          </svg>
+        Explore</a> </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid recent fh5co-portfolio" id="portfolio">
+    <div class="container">
+      <h2>Portfolios</h2>
+      <div class="row">
+        <div class="bx bx-1">
+          <div class="card"> 
+            {% block content %}
+            {% endblock %} 
+          </div>
         </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
+        <div class="bx bx-2">
+          <div class="card"> <img class="card-img" src="static/img/portfolio-img2.png" alt="">
+            <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+              <div class="bottom-text">
+                <h5 class="card-title">Vacation special photography</h5>
+              </div>
             </div>
+          </div>
         </div>
-    </body>
+        <div class="bx bx-3">
+          <div class="card"> <img class="card-img" src="static/img/portfolio-img3.png" alt="">
+            <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+              <div class="bottom-text">
+                <h5 class="card-title">Product photography</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bx bx-4">
+          <div class="card"> <img class="card-img" src="static/img/portfolio-img4.png" alt="">
+            <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+              <div class="bottom-text">
+                <h5 class="card-title">Historical place shots</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bx bx-middle" style="padding: 0;">
+          <div class="bx bx-5">
+            <div class="card"> <img class="card-img" src="static/img/portfolio-img5.png" alt="">
+              <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+                <div class="bottom-text">
+                  <h5 class="card-title">Lorem ipsum dolor</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bx bx-6">
+            <div class="card"> <img class="card-img" src="static/img/portfolio-img6.png" alt="">
+              <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+                <div class="bottom-text">
+                  <h5 class="card-title">Lorem ipsum dolor</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="bx bx-7">
+              <div class="card"> <img class="card-img" src="static/img/portfolio-img7.png" alt="">
+                <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Portraits</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bx bx-8">
+              <div class="card"> <img class="card-img" src="static/img/portfolio-img8.png" alt="">
+                <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+                  <div class="bottom-text">
+                    <h5 class="card-title">Wedding photography</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container-fluid fh5co-insta-feed activity">
+    <div class="container recent">
+      <h2 class="text-center d-block">Find me on social media</h2>
+      <div class="row social-links">
+        <ul class="nav mx-auto">
+          <li class="nav-item"> <a class="nav-link" href="https://www.facebook.com/fh5co"><img src="static/img/facebook.png" alt=""></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="https://twitter.com/fh5co"><img src="static/img/twitter.png" alt=""></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#"><img src="static/img/pinterest.png" alt=""></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#"><img src="static/img/google-plus.png" alt=""></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+  <script src="static/js/jquery-3.3.1.slim.min.js"></script> 
+  <script src="static/js/popper.min.js" ></script> 
+  <script src="static/js/bootstrap.min.js"></script> 
+  <script src="static/js/owl.carousel.min.js"></script> 
+  <script src="static/js/main.js"></script>
+
+</body>
 </html>
