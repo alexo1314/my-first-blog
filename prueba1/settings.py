@@ -128,4 +128,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 19d1b5ebcb33e12351184754648f9401f4e9f231
