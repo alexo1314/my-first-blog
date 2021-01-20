@@ -1,16 +1,24 @@
 {% extends 'blog/base.html' %}
 
+{% extends 'blog/base.html' %}
+{% load static %}
 {% block content %}
-{% for post in posts %}
-    <div class="post">
-        <div class="date" >
-            <p>publicado: {{ post.published_date }}</p>
-        </div>
-        <h2><a href= {% url 'post_detail' pk=post.pk %} >{{ post.title }} <br> <img src= {{ post.imagen.url }} /></h2>        <p>{{ post.text|linebreaksbr }}</p>
-         </a>
-        <h4>Talla: {{ post.talla }}  &nbsp;  -  &nbsp;  Stock: {{ post.stock }}</h4>
-        <h5>${{ post.valor }}</h5>
-        
-    </div>
+
+    
+{% for post in posts %}      
+                {% if post.imagen %}
+                <img class="card-img" src="{{ post.imagen.url }}" alt="">
+                {% endif %}
+                <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
+                    <div class="bottom-text">
+                        <h5 class="card-title"><p><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p></h5>
+                    </div>
+                </div>
 {% endfor %}
-{% endblock %}     
+
+
+{% endblock %}  
+
+{% block prueba %}
+    <p>asdfghjklñwertyuiop</p>
+{% endblock %}    
