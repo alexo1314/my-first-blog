@@ -1,39 +1,28 @@
 {% extends 'blog/base.html' %}
-<<<<<<< HEAD
-=======
-
-{% extends 'blog/base.html' %}
->>>>>>> 19d1b5ebcb33e12351184754648f9401f4e9f231
+{% include 'post_lista.html' %}
 {% load static %}
-{% block content %}
+{% load define_action %}
 
-    
-{% for post in posts %}      
+
+
+{% block content %}
+    <div class="row">
+        {% for post in posts %}  
+        {% with y=forloop.counter|stringformat:"s" %}
+        {% define y as action %}
+        <div class="bx bx-{{ action }}">
+            <div class="card">     
                 {% if post.imagen %}
-                <img class="card-img" src="{{ post.imagen.url }}" alt="">
+                    <img class="card-img" src="{{ post.imagen.url }}" alt="">
                 {% endif %}
                 <div class="card-img-overlay"> <a href="#"><img src="static/img/heart.png" class="heart" alt="heart icon"></a>
                     <div class="bottom-text">
                         <h5 class="card-title"><p><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p></h5>
                     </div>
                 </div>
-{% endfor %}
-
-
+            </div>
+        </div>
+        {% endwith %}
+        {% endfor %}
+    </div>
 {% endblock %}  
-
-{% block prueba %}
-<<<<<<< HEAD
-
-
-
-    <p>asdfghjklñwertyuiop</p>
-
-
-
-
-{% endblock %}  
-=======
-    <p>asdfghjklñwertyuiop</p>
-{% endblock %}    
->>>>>>> 19d1b5ebcb33e12351184754648f9401f4e9f231
