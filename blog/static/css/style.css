@@ -4,7 +4,7 @@
  * Facebook: https://fb.com/fh5co
  * URL: https://freehtml5.co
  */
-* {
+ * {
   margin: 0;
   padding: 0; }
 
@@ -485,20 +485,38 @@ h2 {
     bottom: 15px; }
   .fh5co-portfolio .bx {
     float: left;
-    padding: 7px; }
-  @media (max-width: 1199px) {
-    .fh5co-portfolio .bx-1, .fh5co-portfolio .bx-4 {
-      width: 32.5%; }
-    .fh5co-portfolio .bx-2 {
-      width: 41%; }
-    .fh5co-portfolio .bx-3 {
-      width: 26.5%; }
-    .fh5co-portfolio .bx-middle {
-      width: 67.5%; }
-    .fh5co-portfolio .bx-5, .fh5co-portfolio .bx-8 {
-      width: 39%; }
-    .fh5co-portfolio .bx-6, .fh5co-portfolio .bx-7 {
-      width: 61%; } }
+    padding: 7px;
+    
+   }
+
+
+/* Aquí esta la madre del cordero */
+  .bx-1{
+    width: 350px;
+    
+  }
+  .bx-2{
+    height: 444px;
+  }
+  .bx-3{
+    height: 285px;
+  }
+  .bx-4{
+    height: 350px;
+  }
+  .bx-5{
+    height: 285px;
+  }
+  .bx-6{
+    height: 443px;
+  }
+  .bx-7{
+    height: 444px;
+  }
+  .bx-8{
+    height: 285px;
+  }
+  
   @media (max-width: 991px) {
     .fh5co-portfolio h5 {
       font-size: 16px !important; } }
@@ -843,4 +861,4 @@ footer {
       border-bottom: 1px solid #fff; }
       .single-blog:last-child {
         padding-bottom: 0;
-        border-bottom: none; } }
+        border-bottom: none; } }bx

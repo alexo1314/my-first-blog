@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+<div>
+    
+{% block content %}
+    <div class="col-md-6 pl-0" id="about">
+        {% for post in post %} 
+            {% if post.published_date %}
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+            {% endif %}
+
+            <div class="content">
+                <h3>{{ post.title }}</h3>
+                <h4>{{ post.text|linebreaksbr }}</h4>
+            </div>
+            {% endfor %}
+    </div>
+{% endblock %}
+</div>
