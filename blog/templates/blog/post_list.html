@@ -3,10 +3,16 @@
 {% load static %}
 {% load define_action %}
 
+<<<<<<< HEAD
 
 
 {% block content %}
 <h2>Portfolios</h2>
+=======
+
+
+{% block content %}
+>>>>>>> e5e84542e58e5d10423a34cacdc76d411df6bb4d
     <div class="row">
         {% for post in posts %}  
         {% with y=forloop.counter|stringformat:"s" %}
@@ -25,6 +31,7 @@
         </div>
         {% endwith %}
         {% endfor %}
+<<<<<<< HEAD
 
         {% for post in postsa2 %}  
         {% with y=forloop.counter|stringformat:"s" %}
@@ -97,5 +104,7 @@
         </div>
         {% endwith %}
         {% endfor %}
+=======
+>>>>>>> e5e84542e58e5d10423a34cacdc76d411df6bb4d
     </div>
 {% endblock %}  

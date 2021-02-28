@@ -491,6 +491,7 @@ h2 {
 
 
 /* Aquí esta la madre del cordero */
+<<<<<<< HEAD
   .bx-1{
     width: 350px;
     
@@ -515,6 +516,10 @@ h2 {
   }
   .bx-8{
     height: 285px;
+=======
+  .bx-1, .bx-2, .bx-3, .bx-4, .bx-5, .bx-6, .bx-7, .bx-8{
+    width: 350px;
+>>>>>>> e5e84542e58e5d10423a34cacdc76d411df6bb4d
   }
   
   @media (max-width: 991px) {
