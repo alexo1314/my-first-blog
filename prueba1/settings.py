@@ -128,8 +128,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-<<<<<<< HEAD
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-=======
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
->>>>>>> e5e84542e58e5d10423a34cacdc76d411df6bb4d
+

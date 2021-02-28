@@ -6,18 +6,13 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, ContactoForm
 
 def post_list(request):
-<<<<<<< HEAD
     posts = Post.objects.filter(published_date__lte=timezone.now(), title='PostB').order_by('-published_date')[:1]
     postsa2 = Post.objects.filter(published_date__lte=timezone.now(), title='Trash').order_by('-published_date')[:1]
     postsa3 = Post.objects.filter(published_date__lte=timezone.now(), title='Death').order_by('-published_date')[:1]
     postsa4 = Post.objects.filter(published_date__lte=timezone.now(), title='Black').order_by('-published_date')[:1]
     postsa5 = Post.objects.filter(published_date__lte=timezone.now(), title='Heavy').order_by('-published_date')[:1]
     return render(request, 'blog/post_list.html', {'posts': posts, 'postsa2': postsa2, 'postsa3': postsa3, 'postsa4': postsa4, 'postsa5': postsa5})
-=======
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    postsa2 = Post.objects.filter(published_date__lte=timezone.now(), title='llama2').order_by('-published_date')[:1]
-    return render(request, 'blog/post_list.html', {'posts': posts, 'llamas': postsa2})
->>>>>>> e5e84542e58e5d10423a34cacdc76d411df6bb4d
+
 
 
 # Create your views here.
