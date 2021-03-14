@@ -6,12 +6,10 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, ContactoForm
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now(), title='PostB').order_by('-published_date')[:1]
-    postsa2 = Post.objects.filter(published_date__lte=timezone.now(), title='Trash').order_by('-published_date')[:1]
-    postsa3 = Post.objects.filter(published_date__lte=timezone.now(), title='Death').order_by('-published_date')[:1]
-    postsa4 = Post.objects.filter(published_date__lte=timezone.now(), title='Black').order_by('-published_date')[:1]
-    postsa5 = Post.objects.filter(published_date__lte=timezone.now(), title='Heavy').order_by('-published_date')[:1]
-    return render(request, 'blog/post_list.html', {'posts': posts, 'postsa2': postsa2, 'postsa3': postsa3, 'postsa4': postsa4, 'postsa5': postsa5})
+    posts = Post.objects.filter(published_date__lte=timezone.now(), title='Portafolio').order_by('-published_date')[:1]
+    postsa2 = Post.objects.filter(published_date__lte=timezone.now(), title='Casamientos').order_by('-published_date')[:1]
+    postsa3 = Post.objects.filter(published_date__lte=timezone.now(), title='Conciertos').order_by('-published_date')[:1]
+    return render(request, 'blog/post_list.html', {'posts': posts, 'postsa2': postsa2, 'postsa3': postsa3})
 
 
 
@@ -57,12 +55,20 @@ def post_edit(request, pk):
 
 
 def post_postb(request):
-    post = Post.objects.filter(title='PostB').order_by('-published_date')
-    return render(request, 'blog/post_postb.html', {'post': post})
+    postb = Post.objects.filter(title='Portafolio').order_by('-published_date')
+    return render(request, 'blog/post_postb.html', {'post': postb})
+
+def post_postc(request):
+    postc = Post.objects.filter(title='Casamientos').order_by('-published_date')
+    return render(request, 'blog/post_postc.html', {'post': postc})
+
+def post_postd(request):
+    postd = Post.objects.filter(title='Conciertos').order_by('-published_date')
+    return render(request, 'blog/post_postd.html', {'post': postd})
 
 
 def about(request):
-    post = About.objects.filter(title='Mi trabajo').order_by('-published_date')[:1]
+    post = About.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:1]
     return render(request, 'blog/about.html', {'post': post})
 
 def contacto(request):

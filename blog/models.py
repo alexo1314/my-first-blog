@@ -1,11 +1,16 @@
 from django.db import models
 from django.utils import timezone
 
+opciones_consultas =[
+        ['Portafolio', "Portafolio"],
+        ['Casamientos', "Casamientos"],
+        ['Conciertos', "Conciertos"]
+]
 
 class Post(models.Model):
 
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=12, choices=opciones_consultas, default='portafolio')
     imagen = models.ImageField(null=True, blank=True, upload_to='medias')
     text = models.TextField()
     created_date = models.DateTimeField(

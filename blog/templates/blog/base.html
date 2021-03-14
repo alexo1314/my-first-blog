@@ -23,10 +23,10 @@
       <button class="navbar-toggler ml-auto" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"> <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span> </button>
       <div id="my-nav" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active"> <a class="nav-link" href="/">Home</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="{% url 'about'  %}" tabindex="-1" aria-disabled="true">About</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/#portfolio" tabindex="-1" aria-disabled="true">Portfolio</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{% url 'contacto'  %}" tabindex="-1" aria-disabled="true">Contact</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/">Inicio</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/#portfolio" tabindex="-1" aria-disabled="true">Portafolio</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'about'  %}" tabindex="-1" aria-disabled="true">Acerca de mi</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'contacto'  %}" tabindex="-1" aria-disabled="true">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -46,14 +46,14 @@
       
             {% block content %}
             {% endblock %} 
-
+      </div>
     </div>
   </div>
   
   
   <div class="container-fluid fh5co-insta-feed activity">
     <div class="container recent">
-      <h2 class="text-center d-block">Find me on social media</h2>
+      <h2 class="text-center d-block">MIS REDES SOCIALES</h2>
       <div class="row social-links">
         <ul class="nav mx-auto">
           <li class="nav-item"> <a class="nav-link" href="https://www.facebook.com/fh5co"><img src="static/img/facebook.png" alt=""></a> </li>
@@ -65,7 +65,9 @@
     </div>
   </div>
   
-
+  <div>
+    <br>
+  </div>
   <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
   <script src="static/js/jquery-3.3.1.slim.min.js"></script> 
   <script src="static/js/popper.min.js" ></script> 

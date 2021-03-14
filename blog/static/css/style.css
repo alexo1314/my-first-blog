@@ -50,7 +50,7 @@ h2 {
     padding: 15px 25px;
     color: #fff; }
   .maine-menu .navbar-nav li.active a, .maine-menu .navbar-nav li:hover a, .maine-menu .navbar-nav li:visited a {
-    color: #e90e65; }
+    color: #a5a4a4; }
   .maine-menu .bar1, .maine-menu .bar2, .maine-menu .bar3 {
     width: 25px;
     height: 2px;
@@ -140,13 +140,13 @@ h2 {
       max-width: 260px; }
     .fh5co-home-banner .center-text {
       top: 30%; } }
-
+/*
 .fh5co-two-img .card-img-overlay {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
   background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black);
   background: -linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black); }
-
+*/
 .contact-pop {
   margin-top: -300px; }
   .contact-pop .card-img-overlay {
@@ -177,13 +177,13 @@ h2 {
     .contact-pop .content p {
       color: #584f53; }
     .contact-pop .content hr {
-      background-color: #e90e65;
+      background-color: #443f41;
       width: 50px;
       height: 5px;
       border: none;
       margin-left: 0; }
     .contact-pop .content a {
-      background-color: #e90e65;
+      background-color: #443f41;
       width: 158px;
       border-radius: 40px;
       color: #fefefe;
@@ -217,7 +217,7 @@ h2 {
         border-radius: 15px 15px 0 0; }
       .contact-pop .content {
         border-radius: 0 0 15px 15px; } }
-
+/*
 .owl-carousel, .owl-carousel .owl-item {
   -webkit-tap-highlight-color: transparent;
   position: relative; }
@@ -325,7 +325,7 @@ h2 {
 
 .owl-carousel .fadeOut {
   animation-name: fadeOut; }
-
+*/
 @keyframes fadeOut {
   0% {
     opacity: 1; }
@@ -386,12 +386,12 @@ h2 {
   width: 100%; }
 
 .fh5co-recent-work {
-  background: #e90e65;
+  background: #443f41;
   padding: 100px 0; }
   @media (max-width: 767px) {
     .fh5co-recent-work {
       padding-bottom: 0; } }
-
+/*
 .recent {
   margin-top: 200px; }
   .recent h2 {
@@ -465,10 +465,9 @@ h2 {
   @media (max-width: 767px) {
     .recent {
       margin-top: 100px; } }
-
+*/
 .fh5co-portfolio {
-  background-color: #f2d5d7;
-  background-image: url(../img/camera-bg.jpg);
+  background-color: #dadada;
   background-position: right bottom;
   background-repeat: no-repeat;
   padding: 100px 0;
@@ -477,6 +476,7 @@ h2 {
     color: #584f53;
     margin-bottom: 20px; }
   .fh5co-portfolio .card {
+    height: 10%;
     margin-bottom: 0; }
     .fh5co-portfolio .card.active, .fh5co-portfolio .card:hover {
       transform: none;
@@ -486,30 +486,30 @@ h2 {
   .fh5co-portfolio .bx {
     float: left;
     padding: 7px;
-    
    }
 
 
 /* Aquí esta la madre del cordero */
 
   .bx-1{
-    width: 350px;
+    height: 10%;
+    width: 700px;
     
   }
   .bx-2{
-    height: 444px;
+    height: 700px;
   }
   .bx-3{
-    height: 285px;
+    height: 700px;
   }
   .bx-4{
-    height: 350px;
+    height: 700px;
   }
   .bx-5{
-    height: 285px;
+    height: 700px;
   }
   .bx-6{
-    height: 443px;
+    height: 700px;
   }
   .bx-7{
     height: 444px;
@@ -536,7 +536,7 @@ h2 {
       text-align: center !important; }
       .fh5co-portfolio .bx-middle .heart {
         float: left !important; } }
-
+/*
 .activity {
   background: #f3e7e8;
   padding-bottom: 50px; }
@@ -584,7 +584,8 @@ h2 {
         width: 20px;
         display: inline-block;
         color: #fff; }
-
+*/
+/*
 .fh5co-about-me {
   padding: 0; }
   .fh5co-about-me .card-img-overlay {
@@ -669,7 +670,8 @@ h2 {
         .fh5co-about-me .carousel-indicators li.active {
           height: 100px;
           width: 100px; } }
-
+*/
+/*
 .fh5co-insta-feed {
   padding: 100px 0;
   background: #f7f0f1; }
@@ -712,13 +714,14 @@ h2 {
     background: url(../img/twitter-logo.png);
     margin-left: -55px;
     top: -20px; }
-
+*/
+/*
 .feed-caro {
   padding-top: 36px; }
   @media (max-width: 1199px) {
     .feed-caro {
       padding-top: 95px; } }
-
+*/
 .social-links {
   margin-top: 20px; }
   .social-links ul li {
@@ -735,7 +738,7 @@ h2 {
       background: #fff; }
 
 footer {
-  background: #e90e65; }
+  background: #443f41; }
   footer iframe {
     height: 100%;
     width: 100%; }
@@ -748,7 +751,7 @@ footer {
     max-width: 380px;
     margin: 117px auto; }
     footer .contact-form h3 {
-      color: #e90e65;
+      color: #443f41;
       font-size: 20px;
       text-align: center;
       margin-bottom: 20px; }
@@ -766,7 +769,7 @@ footer {
       resize: none;
       padding-top: 20px !important; }
     footer .contact-form button {
-      background: #e90e65;
+      background: #443f41;
       width: 140px;
       padding: 13px 0;
       font-size: 15px;
@@ -777,7 +780,7 @@ footer {
       display: block;
       cursor: pointer; }
       footer .contact-form button:hover, footer .contact-form button:visited {
-        background: #b90b50; }
+        background: #443f41; }
   footer .copy {
     background: #282526;
     text-align: center; }
@@ -788,7 +791,7 @@ footer {
       transition: 0.3s ease;
       text-decoration: none; }
       footer .copy a:hover {
-        color: #e90e65; }
+        color: #443f41; }
   @media (max-width: 1199px) {
     footer .contact-form {
       margin: 50px auto; } }
@@ -804,7 +807,7 @@ footer {
     padding-left: 0;
     padding-right: 0; } }
 
-/* Blog page style */
+/* Blog page style 
 .fh5co-blog-content {
   background-image: url(../img/girl2.jpg);
   background-position: right bottom;
@@ -863,3 +866,4 @@ footer {
       .single-blog:last-child {
         padding-bottom: 0;
         border-bottom: none; } }bx
+*/
